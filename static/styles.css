@@ -1,0 +1,14 @@
+.pet_thumbnail {
+    height: 250px;
+    width: 370px;
+    object-fit: cover;
+}
+
+body {
+    background-color: #C2FBEF;
+}
+
+.btn:hover {
+    color: #80FFEC;
+    background: rgba(0, 0, 0, 0.7)
+}

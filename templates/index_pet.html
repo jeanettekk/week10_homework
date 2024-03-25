@@ -9,10 +9,12 @@
             <div class ="col-2"></div>
             <div class ="col-8">
               <div class="images text-center">
-                <a href="{{ url_for('dog', name='rio') }}"><img class="rounded img-thumbnail pet_thumbnail" src="{{ image('rio', 'jpeg') }}"></a>
-                <a href="{{ url_for('dog', name='luna') }}"><img class="rounded img-thumbnail pet_thumbnail" src="{{ image('luna', 'webp') }}"></a>
-                <a href="{{ url_for('cat', name='lacey') }}"><img class="rounded img-thumbnail pet_thumbnail" src="{{ image('rio', 'jpeg') }}"></a>
-                <a href="{{ url_for('cat', name='toby') }}"><img class="rounded img-thumbnail pet_thumbnail" src="{{ image('luna', 'webp') }}"></a>
+
+                <a href="{{ url_for('dog', name='rio') }}"><img class="rounded img-thumbnail pet_thumbnail" src="{{ image('rio.jpeg') }}"></a>
+                <a href="{{ url_for('cat', name='toby') }}"><img class="rounded img-thumbnail pet_thumbnail" src="{{ image('toby.jpeg') }}"></a>
+                <a href="{{ url_for('cat', name='lacey') }}"><img class="rounded img-thumbnail pet_thumbnail" src="{{ image('lacey.jpeg') }}"></a>
+                <a href="{{ url_for('dog', name='luna') }}"><img class="rounded img-thumbnail pet_thumbnail" src="{{ image('luna.webp') }}"></a>
+
               </div>
             </div>
             <div class ="col-2"></div>
