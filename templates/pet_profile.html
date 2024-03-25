@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body_content %}
+    <div class="container">
+
+        <div class="row mt-5">
+
+            <div class="col-4">
+
+                <h1 class="float-right h1_pet">Hi, I'm {{ name }}</h1>
+                    {% block paragraph %}{% endblock %}
+
+                <h3 class="mt-5 float-right h1_pet">I'm looking for...</h3>
+                    {% block paragraph_two %}{% endblock %}
+                
+                <button type="button" class="mt-5 btn btn-secondary btn-lg">Apply for Adoption</button>
+            </div>
+
+            {% block image %}{% endblock %}
+
+        </div>
+    </div>
+    
+  {% endblock %}
