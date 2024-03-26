@@ -107,7 +107,8 @@ def home():
 <body>
     <h1>Welcome to Rivera Pearl!</h1>
     <p>Check out our pages:</p>
-    <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.charleskeith.co.uk%2Fdw%2Fimage%2Fv2%2FBCWJ_PRD%2Fon%2Fdemandware.static%2F-%2FSites-ck-products%2Fdefault%2Fdw046eaf5a%2Fimages%2Fhi-res%2F2023-L6-CK2-50271205-J8-1.jpg%3Fsw%3D756%26sh%3D1008&tbnid=GQ4rJ5yos58cHM&vet=12ahUKEwju0P3ClpCFAxUYT6QEHef7BwQQMygaegUIARDeAw..i&imgrefurl=https%3A%2F%2Fwww.charleskeith.co.uk%2Fgb%2FCK2-50271205_NOIR.html&docid=VI--8Her8_ZvIM&w=756&h=1008&q=bag&client=safari&ved=2ahUKEwju0P3ClpCFAxUYT6QEHef7BwQQMygaegUIARDeAw" alt="Bag" style="width: 300px; height: 400px;">
+    <img src="{{ url_for('static', filename='images.jpeg') }}" alt="Bag" style="width: 300px; height: 400px;">
+    <ul class="nav">
     <ul class="nav">
         <li class="nav-item">
             <a class="nav-link" href="/about">About Us</a>
@@ -206,9 +207,12 @@ def product1(shop, amount, product):
     <h1>Product 1</h1>
     <p>Hello!</p>
     <p>You are searching for {product}, priced £{amount}.</p>
+    <img src="{{ url_for('static', filename='images.jpeg') }}" alt="Bag" style="width: 300px; height: 400px;">
     <hr>
-    <a href="{home_url}">Back to Home</a>
-    <a href="{url_for('product2', shop= shop, amount=amount, product=product)}">Next</a>
+     <ul class="list-group"> 
+        <li class="list-group-item"><a href="{home_url}">Back to Home</a></li>
+        <li class="list-group-item"><a href="{url_for('product2', shop= shop, amount=amount, product=product)}">Next</a></li>
+    </ul>
 </body>
 </html>"""
 
@@ -228,10 +232,13 @@ def product2(shop, amount, product):
     <h1>Product 2</h1>
     <p>Hello !</p>
     <p>You are searching for {product}, priced £{amount}.</p>
+    <img src="{{ url_for('static', filename='images.jpeg') }}" alt="Bag" style="width: 300px; height: 400px;">
     <hr>
-    <a href="{home_url}">Back to Home</a>
-    <a href="{url_for('product1', shop=shop, amount=amount, product=product)}">Back</a>
-    <a href="{url_for('product3', shop=shop, amount=amount, product=product)}">Next</a>
+    <ul class="list-group"> 
+         <li class="list-group-item"><a href="{home_url}">Back to Home</a></li>
+         <li class="list-group-item"><a href="{url_for('product1', shop=shop, amount=amount, product=product)}">Back</a></li>
+         <li class="list-group-item"><a href="{url_for('product3', shop=shop, amount=amount, product=product)}">Next</a></li>
+    </ul>
 </body>
 </html>"""
 
@@ -251,6 +258,7 @@ def product3(shop, amount, product):
     <h1>Product 3</h1>
     <p>Hello!</p>
     <p>You are searching for {product}, priced £{amount}.</p>
+    <img src="{{ url_for('static', filename='images.jpeg') }}" alt="Bag" style="width: 300px; height: 400px;">
     <hr>
     <ul class="list-group">
         <li class="list-group-item"><a href="{home_url}">Back to Home</a></li>

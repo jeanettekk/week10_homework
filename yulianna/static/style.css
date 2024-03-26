@@ -1,4 +1,4 @@
-<style>
+
     html, body {
         font-family: sans-serif;
         margin: 0;
@@ -43,6 +43,34 @@
     }
 
     a:hover {
-        color: #0056b3;
+        color: #005;
     }
-</style>
+
+/* Navbar background */
+.navbar {
+    background-color: #f9e8e8;
+}
+
+/* Nav link color */
+.nav-link {
+    color: #007bff;
+}
+
+.nav-link:hover {
+    color: #f9e8e8;
+}
+
+/* Dropdown menu background */
+.dropdown-menu {
+    background-color: #f9e8e8;
+}
+
+
+.dropdown-item {
+    color:  #f9e8e8;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color:  #f9e8e8;
+}
