@@ -1,11 +1,15 @@
 
 from flask import Flask, url_for, Response, request, render_template
 
+# creates an instance of the Flask class. __name__ is a special variable in Python that holds the name of the current
+# module. Flask uses this to determine the root path of the application.
 app = Flask(__name__)
 
+# links to Bootstrap CSS and JavaScript files.
 bootstrap_css_link = '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">'
 bootstrap_js_link = '<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>'
 
+# a string containing some CSS styles
 styles = """
 <style>
    html, body {
@@ -230,7 +234,7 @@ def product2(shop, amount, product):
 </head>
 <body>
     <h1>Product 2</h1>
-    <p>Hello !</p>
+    <p>Hello!</p>
     <p>You are searching for {product}, priced £{amount}.</p>
     <img src="{{ url_for('static', filename='images.jpeg') }}" alt="Bag" style="width: 300px; height: 400px;">
     <hr>
@@ -276,5 +280,8 @@ def page_not_found(error):
     return render_template('404.html'), 404
 
 
+#  This conditional block ensures that the Flask app is only run if the script is executed directly, not when it's
+#  imported as a module. The debug=True argument enables debugging mode, which provides helpful debugging information
+#  in case of errors.
 if __name__ == "__main__":
     app.run(debug=True)
