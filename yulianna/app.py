@@ -1,5 +1,5 @@
 
-from flask import Flask, url_for, Response, request
+from flask import Flask, url_for, Response, request, render_template
 
 app = Flask(__name__)
 
@@ -8,51 +8,12 @@ bootstrap_js_link = '<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstr
 
 styles = """
 <style>
-    html, body {
+   html, body {
         font-family: sans-serif;
         margin: 0;
         padding: 0;
         background-color: #f9e8e8; 
         text-align: center; 
-    }
-
-    h1 {
-        color: #333;
-        font-weight: bold;
-        font-size: 36px;
-        margin-top: 50px;
-    }
-
-    p {
-        color: #1455;
-        font-size: 18px;
-        margin-bottom: 20px; 
-    }
-
-    hr {
-        border: 1px solid #ccc;
-        width: 50%;
-        margin: auto; 
-        margin-bottom: 20px; 
-    }
-
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    ul li {
-        display: inline;
-        margin-right: 10px;
-    }
-
-    a {
-        text-decoration: none;
-        color: #007bff;
-    }
-
-    a:hover {
-        color: #0056b3;
     }
 </style>
 """
@@ -298,6 +259,13 @@ def product3(shop, amount, product):
     </ul>
 </body>
 </html>"""
+
+
+# Custom error handler for 404 Not Found errors
+@app.errorhandler(404)
+def page_not_found(error):
+    # Render a custom template for the 404 error page
+    return render_template('404.html'), 404
 
 
 if __name__ == "__main__":
