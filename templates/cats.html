@@ -2,7 +2,7 @@
 {% block body_content %}
     <div class="container">
         <div class="row mt-5 mx-0 text-center">
-              <h1>We're ready to be adopted!</h1>
+              <h1>{{ animal }}</h1>
         </div>
 
         <div class="row mt-5 mx-0">
@@ -10,10 +10,8 @@
             <div class ="col-8">
               <div class="images text-center">
                 
-                <a href="{{ url_for('dog', name='rio') }}"><img class="rounded img-thumbnail pet_thumbnail" src="{{ image('rio.jpeg') }}"></a>
                 <a href="{{ url_for('cat', name='toby') }}"><img class="rounded img-thumbnail pet_thumbnail" src="{{ image('toby.jpeg') }}"></a>
                 <a href="{{ url_for('cat', name='lacey') }}"><img class="rounded img-thumbnail pet_thumbnail" src="{{ image('lacey.jpeg') }}"></a>
-                <a href="{{ url_for('dog', name='luna') }}"><img class="rounded img-thumbnail pet_thumbnail" src="{{ image('luna.webp') }}"></a>
 
               </div>
             </div>

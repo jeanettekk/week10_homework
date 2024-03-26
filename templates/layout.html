@@ -20,10 +20,10 @@
               <a class="nav-link" href="{{ url_for('home') }}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">Cats</a>
+              <a class="nav-link" href="{{ url_for('all_animals', animal='cats') }}">Cats</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">Dogs</a>
+              <a class="nav-link" href="{{ url_for('all_animals', animal='dogs') }}">Dogs</a>
             </li>
           </ul>
         </div>

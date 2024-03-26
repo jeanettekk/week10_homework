@@ -6,7 +6,6 @@ app = Flask(__name__)
 
 
 def get_image(name_filetype):
-
     return url_for('static', filename=name_filetype)
 
 
@@ -17,7 +16,6 @@ def home():
 
 @app.route('/dog/<name>')
 def dog(name):
-
     return render_template(f'{name}.html', title=f'{name.upper()} | Pet Adoption Center', image=get_image,
                            name=name.capitalize())
 
@@ -27,11 +25,11 @@ def cat(name):
     return render_template(f'{name}.html', title=f'{name.upper()} | Pet Adoption Center', image=get_image,
                            name=name.capitalize())
 
-# @app.route('/<animal>')
-# def all_animals(animal)
-#
-#
-#     return render_template()
+
+@app.route('/<animal>')
+def all_animals(animal):
+    return render_template(f'{animal}.html', title=f'{animal.upper()} | Pet Adoption Center', image=get_image,
+                           animal=animal.capitalize())
 
 
 if __name__ == '__main__':
